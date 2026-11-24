@@ -4,8 +4,10 @@ Entrega do 2° Tde de Backend - POUSADA MARÉ ALTA
 Projeto-Pousada-Mare-Alta/
 │
 ├── README.md
+
 │
 ├── src/
+
 │   ├── Quarto.java
 │   ├── QuartoLuxo.java
 │   ├── Chale.java
@@ -15,8 +17,11 @@ Projeto-Pousada-Mare-Alta/
 │   ├── Conta.java
 │   ├── Lavanderia.java
 │   └── Main.java
+
 │
 ├── docs/
+
 │   └── Diagrama-Classes.pdf
+
 │
 └── .gitignore
