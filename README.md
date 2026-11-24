@@ -13,7 +13,7 @@ Projeto-Pousada-Mare-Alta/
 │   ├── Reserva.java
 │   ├── Passeio.java
 │   ├── Conta.java
-│   ├── Lavanderia.java
+│   ├── Restaurante.java
 │   └── Main.java
 │
 ├── docs/
