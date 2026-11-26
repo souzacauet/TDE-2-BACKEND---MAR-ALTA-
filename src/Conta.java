@@ -1,42 +1,38 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Conta {
+
     private String hospede;
-    private List<Cobravel> itens;
+    private Cobravel[] itens;
 
-    public Conta(String hospede) {
+    public Conta(String hospede, Cobravel[] itens) {
         this.hospede = hospede;
-        this.itens = new ArrayList<>();
-    }
-
-    public void adicionar(Cobravel item) {
-        if (item != null) {
-            itens.add(item);
-        }
+        this.itens = itens;
     }
 
     public double calcularTotal() {
-        double total = 0.0;
+        double total = 0;
+
         for (Cobravel item : itens) {
             total += item.calcularValor();
         }
+
         return total;
     }
 
-    public void exibir() {
-        System.out.println("=== Conta: " + hospede + " ===");
+    public double calcularTotal(double descontoPercentual) {
+        double total = calcularTotal();
+
+        return total - (total * descontoPercentual / 100);
+    }
+
+    public void imprimirExtrato() {
+        System.out.println("Hospede: " + hospede);
+        System.out.println("\n=== ITENS DA CONTA ===");
+
         for (Cobravel item : itens) {
-            System.out.println("- " + item.descricao() + " R$ " + item.calcularValor());
+            System.out.println(item.descricao());
+            System.out.println("Valor: R$ " + item.calcularValor());
         }
-        System.out.println("Total: R$ " + calcularTotal());
-    }
 
-    public String getHospede() {
-        return hospede;
-    }
-
-    public List<Cobravel> getItens() {
-        return itens;
+        System.out.println("\nTotal: R$ " + calcularTotal());
     }
 }
